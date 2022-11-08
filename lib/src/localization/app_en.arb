@@ -1,0 +1,8 @@
+{
+  "appTitle": "People",
+  "@appTitle": {
+    "description": "People"
+  },
+  "email": "Email",
+  "password": "password"
+}
