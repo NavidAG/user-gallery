@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:people/models/user.dart';
-import 'package:people/repositories/users_repository.dart';
+import 'package:people/src/users/widgets/add_new_user_modal.dart';
 import 'package:people/src/users/user_detail_page.dart';
 import 'package:people/src/users/users_bloc/users_bloc.dart';
 
@@ -44,6 +44,10 @@ class _UsersPageState extends State<UsersPage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(AppLocalizations.of(context)!.users),
+          actions: [
+            IconButton(
+                onPressed: () => _addUserModel(), icon: const Icon(Icons.add))
+          ],
         ),
         body: BlocBuilder<UsersBloc, UsersState>(
           builder: (context, state) {
@@ -87,5 +91,14 @@ class _UsersPageState extends State<UsersPage> {
             builder: (context) => UserDetailPage(
                   user: user,
                 )));
+  }
+
+  void _addUserModel() {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AddNewUserModal();
+      },
+    );
   }
 }

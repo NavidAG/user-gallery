@@ -7,5 +7,7 @@
   "password": "password",
   "login": "Login",
   "loginFailed": "Login Failed! Please try again.",
-  "users": "Users"
+  "users": "Users",
+  "name": "Name",
+  "add": "Add"
 }
