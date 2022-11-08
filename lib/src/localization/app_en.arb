@@ -4,5 +4,8 @@
     "description": "People"
   },
   "email": "Email",
-  "password": "password"
+  "password": "password",
+  "login": "Login",
+  "loginFailed": "Login Failed! Please try again.",
+  "users": "Users"
 }

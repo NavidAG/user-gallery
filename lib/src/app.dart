@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:people/src/login/presentation/login_page.dart';
+import 'package:people/src/users/users_page.dart';
 
 import 'sample_feature/sample_item_details_view.dart';
 import 'sample_feature/sample_item_list_view.dart';
@@ -69,9 +70,9 @@ class MyApp extends StatelessWidget {
               builder: (BuildContext context) {
                 switch (routeSettings.name) {
                   case LoginPage.routeName:
-                    return const LoginPage();
+                    return UsersPage();
                   default:
-                    return const LoginPage();
+                    return UsersPage();
                 }
               },
             );
