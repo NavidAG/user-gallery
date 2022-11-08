@@ -13,8 +13,10 @@ class UsersInProgress extends UsersState {}
 
 class UsersFetched extends UsersState {
   final List<User> users;
+  final uuid = Uuid();
 
-  const UsersFetched(this.users);
+  UsersFetched(this.users);
+  List<Object> get props => [uuid];
 }
 
 class UsersFailed extends UsersState {}

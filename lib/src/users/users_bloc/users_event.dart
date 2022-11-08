@@ -7,8 +7,4 @@ abstract class UsersEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class UsersRequested extends UsersEvent {
-  final int pageNumber;
-
-  const UsersRequested(this.pageNumber);
-}
+class UsersRequested extends UsersEvent {}
